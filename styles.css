@@ -1,0 +1,230 @@
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #283149; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+   
+  background: #fff; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+  
+}
+
+body {
+  text-align: center;
+  background-color: #283149;
+}
+
+h1{
+  font-size: 5rem;
+  color: rgb(8, 8, 8);
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 rgb(228, 19, 19);
+
+}
+h1 .drum-icon{
+  font-size: 5rem;
+  text-shadow: none;
+}
+
+footer {
+  margin-top: 5%;
+  color: #DBEDF3;
+  font-family: sans-serif;
+}
+p{
+  margin: 20px 0 5px 0;
+}
+span{
+  color: #fff;
+}
+.hidden{
+  visibility: hidden;
+}
+.style{
+  letter-spacing: 8px;
+  font-family: 'Redressed', cursive;
+  font-size: 4rem;
+}
+
+.user{
+
+  color: #ff577f;
+
+}
+.something{
+  margin: 50px auto 0 auto;
+  width: 100%;
+  text-align: left;
+}
+.input{
+
+  margin-top: 5px;
+  letter-spacing: 8px;
+  font-family: 'Redressed', cursive;
+  font-size: 2rem;
+}
+.div{  
+  background-color: #DA0463;
+  border-radius: 100px;
+  margin: 3% auto 0 auto;
+  width: 80%;
+  overflow: auto;
+
+}
+.ss{
+  background-color: #DA0463;
+  border-radius: 10px;
+  margin: 3% auto 0 auto;
+  width: 80%;
+  overflow: auto;
+}
+.set {
+  margin: 2% auto 2% auto;
+}
+.crash {
+  background-image: url(images/crash.png);
+}
+
+.kick-bass {
+  background-image: url(images/kick.png);
+}
+
+.snare {
+  background-image: url(images/snare.png);
+}
+
+.tom-1 {
+  background-image: url(images/tom1.png);
+}
+
+.tom-2 {
+
+  background-image: url(images/tom2.png);
+}
+
+.tom-3 {
+
+  background-image: url(images/tom3.png);
+}
+
+.tom-4 {
+
+  background-image: url(images/tom4.png);
+
+}
+
+
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: #0000;
+}
+.pink{
+  color: #DA0463;
+}
+.drum {
+  outline: none;
+  border: 5px solid #404B69;
+  font-size: 5rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+}
+
+.tutorial-btn {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #ff577f;
+  padding: 10px 15px 10px 15px;
+  text-decoration: none;
+  border: 1px;
+  margin-top: 2%;
+}
+
+.tutorial-btn:hover {
+  background: #fa4b76;
+  text-decoration: none;
+}
+.tutorial-btn:active{
+  outline: none;
+}
+.tutorial-btn:focus{
+  outline: none;
+}
+@media (max-width:990px){
+  h1{
+    margin: 5% 5% 5% 5%;
+    font-size: 3rem;
+  }
+  h1 .drum-icon{
+    margin-top: 5%;
+    font-size: 3rem;
+  }
+  .drum {
+    outline: none;
+    border: 5px solid #404B69;
+    font-size: 3rem;
+    font-family: 'Arvo', cursive;
+    line-height: 2;
+    font-weight: 900;
+    text-shadow: 3px 0 #DBEDF3;
+    border-radius: 15px;
+    display: inline-block;
+    width:90px;
+    height: 100px;
+    text-align: center;
+    margin: 10px;
+    background-color: white;
+  }
+  .style{
+    letter-spacing: 5px;
+    font-size: 1.84333rem;
+  }
+  .something{
+    margin: 5px auto 0 auto;
+    width: 100%;
+    text-align: left;
+  }
+  .tutorial-btn{
+    font-size: 16px;
+    padding: 8px 15px 8px 15px;
+  }
+  button{
+    margin-top: 3%;
+  }
+
+}
