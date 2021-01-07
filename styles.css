@@ -49,6 +49,9 @@ p{
 span{
   color: #fff;
 }
+.tutorials-div{
+  margin: 10% auto;
+}
 .hidden{
   visibility: hidden;
 }
@@ -59,7 +62,6 @@ span{
 }
 
 .user{
-
   color: #ff577f;
 
 }
@@ -89,6 +91,7 @@ span{
   margin: 3% auto 0 auto;
   width: 80%;
   overflow: auto;
+  white-space: pre-wrap;
 }
 .set {
   margin: 2% auto 2% auto;
@@ -225,6 +228,9 @@ span{
   }
   button{
     margin-top: 3%;
+  }
+  .div{
+    border-radius: 15px;
   }
 
 }
