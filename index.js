@@ -123,6 +123,7 @@ function tutorialclick() {
 		style[1].classList.add("hidden");
 		style[1].innerHTML = ":";
 		document.querySelector('#tutorial').innerHTML = "Start Tutorial"
+                document.querySelector('.users').innerHTML=`<span class="span">${span}</span>`
           	count = 0;
 		status = "false";
 	};
