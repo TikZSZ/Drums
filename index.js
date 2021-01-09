@@ -1,4 +1,4 @@
-
+var span = document.querySelector('.span').innerHTML;
 // style functions
 function addstyle(p) {
 
@@ -112,17 +112,20 @@ function tutroial(p) {
         if(count===0){
             if (p.innerHTML === str[count]){
                 count = count + 1
-                document.querySelector('.user').innerHTML += '  "'+p.innerHTML
+                document.querySelector('.style').innerHTML=span.slice(0,count)+`<span class="span">${span.slice(count,span.length)}</span>`
+                document.querySelector('.user').innerHTML += p.innerHTML;
             }
         }else if(count===(str.length-1)){
             if (p.innerHTML === str[count]){
                 count = count + 1
-                document.querySelector('.user').innerHTML += p.innerHTML+'"'
+                document.querySelector('.style').innerHTML=span.slice(0,count)+`<span class="span">${span.slice(count,span.length)}</span>`
+                document.querySelector('.user').innerHTML += p.innerHTML;
             } 
         }else{
             if (p.innerHTML === str[count]){
                 count = count + 1
-                document.querySelector('.user').innerHTML += p.innerHTML
+                document.querySelector('.style').innerHTML=span.slice(0,count)+`<span class="span">${span.slice(count,span.length)}</span>`
+                document.querySelector('.user').innerHTML += p.innerHTML;
             }
         } 
     }
@@ -150,7 +153,7 @@ function show(){
         document.querySelector('.div').classList.remove('hidden')
         is_history= "true"
         document.querySelector('#history').innerHTML="Hide My History"
-    }else if(is_history= "ture"){
+    }else if(is_history= "true"){
         document.querySelector('.div').classList.add('hidden')
         is_history="false"
         document.querySelector('#history').innerHTML="Show My History"
@@ -158,23 +161,44 @@ function show(){
     }
 }
 
-var isSyncingLeftScroll = false;
-var isSyncingRightScroll = false;
-var leftDiv = document.querySelector('.users');
-var rightDiv = document.querySelector('.user');
 
-leftDiv.onscroll = function() {
-  if (!isSyncingLeftScroll) {
-    isSyncingRightScroll = true;
-    rightDiv.scrollLeft = this.scrollLeft;
-  }
-  isSyncingLeftScroll = false;
+// function for scroll synchronization
+
+var TopDiv = document.querySelector('.users');
+var BottomDiv = document.querySelector('.user');
+
+TopDiv.onscroll = function() {
+    
+    BottomDiv.scrollLeft = this.scrollLeft;
 }
 
-rightDiv.onscroll = function() {
-  if (!isSyncingRightScroll) {
-    isSyncingLeftScroll = true;
-    leftDiv.scrollLeft = this.scrollLeft;
-  }
-  isSyncingRightScroll = false;
+BottomDiv.onscroll = function() {
+    TopDiv.scrollLeft = (this.scrollLeft);
+}
+
+var el = document.querySelector('.user')
+
+
+var paragraph = document.querySelector('.style').innerHTML;
+
+setInterval(autoScroll, 100);
+
+function autoScroll(){
+
+    // check if scrolled to right
+    function checkScrolledToRight(el){
+        if(el.scrollLeft=(el.scrollWidth-el.offsetWidth)){
+            return true
+        }else{
+            return false
+        }
+    }
+    var scroll = checkScrolledToRight(el)
+    // if not scroll to right
+    function scrollToRight(el){
+        el.scrollLeft=(el.scrollWidth-el.offsetWidth)
+    }
+    if(!scroll){
+        scrollToRight(el)
+    }
 }
