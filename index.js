@@ -104,6 +104,10 @@ function tutroial(p) {
 			count = count + 1;
 			document.querySelector('.style').innerHTML = span.slice(0, count) + `<span class="span">${span.slice(count,span.length)}</span>`;
 			document.querySelector('.user').innerHTML += p.innerHTML;
+                        if((count)===str.length){
+    document.getElementById('tutorial').click()
+    document.getElementById('tutorial').click()
+};
 		};
 	};
 };
