@@ -107,7 +107,7 @@ function tutroial(p) {
                         if((count)===str.length){
     document.getElementById('tutorial').click()
     document.getElementById('tutorial').click()
-};
+                        };
 		};
 	};
 };
