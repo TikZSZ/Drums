@@ -121,7 +121,7 @@ function tutorialclick() {
 	} else if (status === "true") {
 		style[0].classList.add("hidden");
 		style[1].classList.add("hidden");
-		style[1].innerHTML = "";
+		style[1].innerHTML = ":";
 		document.querySelector('#tutorial').innerHTML = "Start Tutorial";
 		count = 0;
 		status = "false";
