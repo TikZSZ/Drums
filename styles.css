@@ -82,18 +82,20 @@ span {
   text-align: left;
 }
 .input {
+  text-align: left;
   margin-top: 5px;
   letter-spacing: 8px;
   font-family: "Redressed", cursive;
   font-size: 2rem;
+  overflow: auto;
+  white-space: nowrap;
 }
 .div {
   background-color: #da0463;
   border-radius: 100px;
   margin: 3% auto 0 auto;
   width: 80%;
-  overflow: auto;
-  white-space: nowrap;
+
 }
 
 .set {
@@ -221,10 +223,11 @@ span {
   .tutorial-btn {
     font-size: 16px;
     padding: 8px 15px 8px 15px;
-    margin: 10% auto;
+    margin: 0% 1% 1% 1%;
+    
   }
-  button {
-    margin-top: 3%;
+  .input{
+    font-size: 1.2rem;
   }
   .div {
     border-radius: 15px;

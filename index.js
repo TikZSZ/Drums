@@ -136,34 +136,82 @@ function show() {
 		document.querySelector('#history').innerHTML = "Show My History";
 	};
 };
+
+var scroll_status=false;
+function analyse(){
+	console.log(scroll_status);
+	if(!scroll_status){
+		scroll_status=true;
+		document.getElementById('analyse').innerHTML="Stop Long History";
+	}else{
+		scroll_status=false;
+		document.getElementById('analyse').innerHTML="Long History";
+
+	};
+	
+};
+
 // function for scroll synchronization
+
 var TopDiv = document.querySelector('.users');
 var BottomDiv = document.querySelector('.user');
 TopDiv.onscroll = function () {
 	BottomDiv.scrollLeft = this.scrollLeft;
 };
 BottomDiv.onscroll = function () {
-	TopDiv.scrollLeft = (this.scrollLeft);
+	TopDiv.scrollLeft = this.scrollLeft;
+	
+
 };
-var el = document.querySelector('.user');
-var paragraph = document.querySelector('.style').innerHTML;
+
+var el1 = document.querySelector('.user');
+var el2 = document.querySelector('.input');
+
+
 setInterval(autoScroll, 100);
 
 function autoScroll() {
 	// check if scrolled to right
-	function checkScrolledToRight(el) {
-		if (el.scrollLeft = (el.scrollWidth - el.offsetWidth)) {
-			return true;
-		} else {
-			return false;
-		};
-	};
-	var scroll = checkScrolledToRight(el);
+	var scroll = checkScrolledToRight(el1);
+	var scroll2 = checkScrolledToRight(el2);
+	
+		
 	// if not scroll to right
-	function scrollToRight(el) {
-		el.scrollLeft = (el.scrollWidth - el.offsetWidth);
-	};
 	if (!scroll) {
-		scrollToRight(el);
+		scrollToRight(el1);		
+	};
+	if(!scroll_status){
+		if (!scroll2) {
+			scrollToRight(el2);		
+		};
+	}
+
+};
+
+function checkScrolledToRight(el) {
+	if(el.scrollLeft >= (el.scrollWidth - el.offsetWidth)){
+		return true;
+	} else {
+		return false;
 	};
 };
+
+function scrollToRight(el) {
+	el.scrollLeft = (el.scrollWidth);
+};
+
+
+// function scrolldown() {
+// 	setTimeout(
+// 	  function()
+// 	  {
+// 		el1.scrollLeft=(el1.scrollWidth);
+// 		console.log("hello 2");
+// 		scrolldown();
+// 	  }, 100
+// 	)
+//   }
+
+// scrolldown()
+  
+ 
