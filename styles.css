@@ -5,12 +5,12 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #283149; 
+  background: #283149;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #fff; 
+  background: #fff;
   border-radius: 10px;
 }
 
@@ -26,79 +26,74 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .style {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 body {
   text-align: center;
   background-color: #283149;
 }
 
-h1{
+h1 {
   font-size: 5rem;
   color: rgb(8, 8, 8);
   font-family: "Arvo", cursive;
   text-shadow: 3px 0 rgb(228, 19, 19);
-
 }
-h1 .drum-icon{
+h1 .drum-icon {
   font-size: 5rem;
   text-shadow: none;
 }
 
 footer {
   margin-top: 5%;
-  color: #DBEDF3;
+  color: #dbedf3;
   font-family: sans-serif;
 }
-p{
+p {
   margin: 20px 0 5px 0;
 }
-span{
+span {
   color: #fff;
 }
 
-.hidden{
+.hidden {
   visibility: hidden;
 }
-.style{
+.style {
   letter-spacing: 8px;
-  font-family: 'Redressed', cursive;
+  font-family: "Redressed", cursive;
   font-size: 4rem;
-  background-color: #DA0463;
+  background-color: #da0463;
   border-radius: 10px;
   margin: 3% auto 0 auto;
   overflow: auto;
   white-space: nowrap;
 }
-.users{
-  width:80%;
+.users {
+  width: 80%;
 }
-.user{
-
-  width:70%;
-
+.user {
+  width: 70%;
 }
-.something{
+.something {
   margin: 50px auto 0 auto;
   width: 100%;
   text-align: left;
 }
-.input{
-
+.input {
   margin-top: 5px;
   letter-spacing: 8px;
-  font-family: 'Redressed', cursive;
+  font-family: "Redressed", cursive;
   font-size: 2rem;
 }
-.div{  
-  background-color: #DA0463;
+.div {
+  background-color: #da0463;
   border-radius: 100px;
   margin: 3% auto 0 auto;
   width: 80%;
   overflow: auto;
   white-space: nowrap;
-
 }
 
 .set {
@@ -121,22 +116,16 @@ span{
 }
 
 .tom-2 {
-
   background-image: url(images/tom2.png);
 }
 
 .tom-3 {
-
   background-image: url(images/tom3.png);
 }
 
 .tom-4 {
-
   background-image: url(images/tom4.png);
-
 }
-
-
 
 .game-over {
   background-color: red;
@@ -144,25 +133,25 @@ span{
 }
 
 .pressed {
-  box-shadow: 0 3px 4px 0 #DBEDF3;
+  box-shadow: 0 3px 4px 0 #dbedf3;
   opacity: 0.5;
 }
 
 .red {
   color: #0000;
 }
-.pink{
-  color: #DA0463;
+.pink {
+  color: #da0463;
 }
 .drum {
   outline: none;
-  border: 5px solid #404B69;
+  border: 5px solid #404b69;
   font-size: 5rem;
-  font-family: 'Arvo', cursive;
+  font-family: "Arvo", cursive;
   line-height: 2;
   font-weight: 900;
 
-  text-shadow: 3px 0 #DBEDF3;
+  text-shadow: 3px 0 #dbedf3;
   border-radius: 15px;
   display: inline-block;
   width: 150px;
@@ -190,55 +179,54 @@ span{
   background: #fa4b76;
   text-decoration: none;
 }
-.tutorial-btn:active{
+.tutorial-btn:active {
   outline: none;
 }
-.tutorial-btn:focus{
+.tutorial-btn:focus {
   outline: none;
 }
-@media (max-width:990px){
-  h1{
+@media (max-width: 990px) {
+  h1 {
     margin: 5% 5% 5% 5%;
     font-size: 3rem;
   }
-  h1 .drum-icon{
+  h1 .drum-icon {
     margin-top: 5%;
     font-size: 3rem;
   }
   .drum {
     outline: none;
-    border: 5px solid #404B69;
+    border: 5px solid #404b69;
     font-size: 3rem;
-    font-family: 'Arvo', cursive;
+    font-family: "Arvo", cursive;
     line-height: 2;
     font-weight: 900;
-    text-shadow: 3px 0 #DBEDF3;
+    text-shadow: 3px 0 #dbedf3;
     border-radius: 15px;
     display: inline-block;
-    width:90px;
+    width: 90px;
     height: 100px;
     text-align: center;
     margin: 10px;
     background-color: white;
   }
-  .style{
+  .style {
     font-size: 1.84rem;
   }
-  .something{
+  .something {
     margin: 5px auto 0 auto;
     width: 100%;
     text-align: left;
   }
-  .tutorial-btn{
+  .tutorial-btn {
     font-size: 16px;
     padding: 8px 15px 8px 15px;
-    margin:10% auto;
+    margin: 10% auto;
   }
-  button{
+  button {
     margin-top: 3%;
   }
-  .div{
+  .div {
     border-radius: 15px;
   }
-
 }
