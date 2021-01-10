@@ -4,13 +4,44 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Drum Kit</title>
-  <link rel="stylesheet" href="styles.css">
+   
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Arvo&family=Redressed&display=swap" as="style">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arvo&family=Redressed&display=swap">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Arvo&family=Redressed&display=swap" as="style" onload="rel='stylesheet'">
+  <link rel="stylesheet" href="styles.css">
+
+  <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arvo&family=Redressed&display=swap">-->
+  
   
 </head>
 <body>
+   
+  <style type="text/css" media="all">
+    body {
+    text-align: center;
+    background-color: #283149;
+    }
+
+    h1 {
+      font-size: 5rem;
+      color: rgb(8, 8, 8);
+      font-family: "Arvo", cursive;
+      text-shadow: 3px 0 rgb(228, 19, 19);
+    }
+    h1 .drum-icon {
+      font-size: 5rem;
+      text-shadow: none;
+    }
+    @media (max-width: 990px) {
+      h1 {
+        margin: 5% 5% 5% 5%;
+        font-size: 3rem;
+      }
+      h1 .drum-icon {
+        margin-top: 5%;
+        font-size: 3rem;
+      }
+    }
+  </style>
 
   <h1 id="title">Drum <span class="drum-icon">🥁</span> Kit</h1>
   <div class="tutorials-div">
@@ -20,7 +51,7 @@
     </div>
     
   </div>
-
+    
   <div class="set">  
     <button class="crash drum pink">w</button>
     <button class="kick-bass drum pink">a</button>
@@ -36,10 +67,11 @@
   <button  id = "tutorial" onclick="tutorialclick()" class ="tutorial-btn ">Begain Tutorial</button>
   <button id="analyse" class="tutorial-btn " onclick="analyse()">Long History</button>
 
-  <script src="index.js"></script>
-</body>
-<footer>
+  
+  <footer>
   Made with ❤️ in India.
-</footer>
+  </footer>
+  <script async src="index.js"></script>
+</body>
 
 </html>
