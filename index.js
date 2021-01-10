@@ -14,14 +14,26 @@ function removestyle(p) {
 	}, 100);
 };
 // event listners
-// touch listner
-const btnArray = document.querySelectorAll('.drum');
-for (var i = 0; i < btnArray.length; i++) {
-	btnArray[i].addEventListener('click', function () {
-		document.querySelector('.input').innerHTML += this.innerHTML;
-		play(this.innerHTML);
-	});
-};
+	// touch listner (Method -1)
+
+// const btnArray = document.querySelectorAll('.drum');
+// for (var i = 0; i < btnArray.length; i++) {
+// 	btnArray[i].addEventListener('click', function () {
+// 		document.querySelector('.input').innerHTML += this.innerHTML;
+// 		play(this.innerHTML);
+// 	});
+// };
+
+// Method 2 single event listern
+
+document.querySelector('.set').addEventListener("click",function (event) {
+	if(event.target!==event.currentTarget){
+		document.querySelector('.input').innerHTML += event.path[0].innerHTML;
+		play(event.path[0].innerHTML);
+	};
+	event.stopPropagation;
+	},false);
+
 // press listner
 document.addEventListener('keydown', function (event) {
 	document.querySelector('.input').innerHTML += event.key;
@@ -29,62 +41,76 @@ document.addEventListener('keydown', function (event) {
 });
 // player
 function play(keyp) {
-	var audio = new Audio();
+
 	switch (keyp) {
 	case "w":
 		var w = document.querySelector('.crash');
 		addstyle(w);
 		tutroial(w);
-		audio.src = "sounds/crash.mp3";
-		audio.play();
+		var audio1 = new Audio();
+        audio1.src = "sounds/crash.mp3";
+        audio1.preload="auto"
+        audio1.play()
 		removestyle(w);
 		break;
 	case "a":
 		var a = document.querySelector('.kick-bass');
 		addstyle(a);
 		tutroial(a);
-		audio.src = "sounds/kick-bass.mp3";
-		audio.play();
+		var audio2 = new Audio();
+        audio2.src = "sounds/kick-bass.mp3";
+        audio2.preload="auto"
+		audio2.play();
 		removestyle(a);
 		break;
 	case "s":
 		var s = document.querySelector('.snare');
 		addstyle(s);
 		tutroial(s);
-		audio.src = "sounds/snare.mp3";
-		audio.play();
+		var audio3 = new Audio();
+        audio3.src = "sounds/snare.mp3";
+        audio3.preload="auto"
+		audio3.play();
 		removestyle(s);
 		break;
 	case "d":
 		var d = document.querySelector('.tom-1');
 		addstyle(d);
 		tutroial(d);
-		audio.src = "sounds/tom-1.mp3";
-		audio.play();
+		var audio4 = new Audio();
+        audio4.src = "sounds/tom-1.mp3";
+        audio4.preload="auto"
+		audio4.play();
 		removestyle(d);
 		break;
 	case "j":
 		var j = document.querySelector('.tom-2');
 		addstyle(j);
 		tutroial(j);
-		audio.src = "sounds/tom-2.mp3";
-		audio.play();
+		var audio5 = new Audio();
+        audio5.src = "sounds/tom-2.mp3";
+        audio5.preload="auto"
+		audio5.play();
 		removestyle(j);
 		break;
 	case "k":
 		var k = document.querySelector('.tom-3');
 		addstyle(k);
 		tutroial(k);
-		audio.src = "sounds/tom-3.mp3";
-		audio.play();
+		var audio6 = new Audio();
+        audio6.src = "sounds/tom-3.mp3";
+        audio6.preload="auto"
+		audio6.play();
 		removestyle(k);
 		break;
 	case "l":
 		var l = document.querySelector('.tom-4');
 		addstyle(l);
 		tutroial(l);
-		audio.src = "sounds/tom-4.mp3";
-		audio.play();
+		var audio7 = new Audio();
+        audio7.src = "sounds/tom-4.mp3";
+        audio7.preload="auto"
+		audio7.play();
 		removestyle(l);
 		break;
 	default:
@@ -123,7 +149,7 @@ function tutorialclick() {
 		style[1].classList.add("hidden");
 		style[1].innerHTML = ":";
 		document.querySelector('#tutorial').innerHTML = "Start Tutorial"
-                document.querySelector('.users').innerHTML=`<span class="span">${span}</span>`
+        document.querySelector('.users').innerHTML=`<span class="span">${span}</span>`
           	count = 0;
 		status = "false";
 	};
