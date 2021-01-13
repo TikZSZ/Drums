@@ -16,36 +16,42 @@
 <body>
    
   <style type="text/css" media="all">
-    body {
+  *{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+  }
+  body {
     text-align: center;
     background-color: #283149;
-    }
+  }
 
+  h1 {
+    margin-top: 2%;
+    font-size: 5rem;
+    color: rgb(8, 8, 8);
+    font-family: "Arvo", cursive;
+    text-shadow: 3px 0 rgb(228, 19, 19);
+  }
+  h1 .drum-icon {
+    font-size: 5rem;
+    text-shadow: none;
+  }
+  @media (max-width: 990px) {
     h1 {
-      font-size: 5rem;
-      color: rgb(8, 8, 8);
-      font-family: "Arvo", cursive;
-      text-shadow: 3px 0 rgb(228, 19, 19);
+      margin: 5% 5% 5% 5%;
+      font-size: 3rem;
     }
     h1 .drum-icon {
-      font-size: 5rem;
-      text-shadow: none;
+      margin-top: 5%;
+      font-size: 3rem;
     }
-    @media (max-width: 990px) {
-      h1 {
-        margin: 5% 5% 5% 5%;
-        font-size: 3rem;
-      }
-      h1 .drum-icon {
-        margin-top: 5%;
-        font-size: 3rem;
-      }
-    }
+  }
   </style>
 
   <h1 id="title">Drum <span class="drum-icon">🥁</span> Kit</h1>
   <div class="tutorials-div">
-    <div class="something">
+    <div id ="something"  class="something">
       <p class = "style users hidden" ><span class="span">jkjkjkjkkwdjdjdjdjdjw</span></p>
       <p class = "style user  hidden">:</p>
     </div>
@@ -60,7 +66,7 @@
     <button class="tom-2 drum pink">j</button>
     <button class="tom-3 drum pink">k</button>
     <button class="tom-4 drum pink">l</button>
-    <div class="div hidden"> <p class="input"><span >key History:</span></p></div>
+    <div class="div "> <p class="input hidden"><span >key History:</span></p></div>
     
   </div>
   <button id ="history" onclick="show()" class ="tutorial-btn  ">Show My History</button>
@@ -68,9 +74,10 @@
   <button id="analyse" class="tutorial-btn " onclick="analyse()">Long History</button>
 
   
-  <footer>
-  Made with ❤️ in India.
-  </footer>
+  <!-- <footer>
+  
+  </footer> -->
+  <div class="footer"><p>Made with ❤️ in India.</p></div>
   <script async src="index.js"></script>
 </body>
 

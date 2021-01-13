@@ -141,28 +141,37 @@ function tutroial(p) {
 function tutorialclick() {
 	if (status === "false") {
 		style[0].classList.remove("hidden");
-		style[1].classList.remove("hidden");
+        style[1].classList.remove("hidden");
+        // var viewport = window.innerWidth;
+        
 		document.querySelector('#tutorial').innerHTML = "Stop Tutorial";
+		
 		status = "true";
 	} else if (status === "true") {
+
 		style[0].classList.add("hidden");
 		style[1].classList.add("hidden");
-		style[1].innerHTML = ":";
+        style[1].innerHTML = ":";
 		document.querySelector('#tutorial').innerHTML = "Start Tutorial"
         document.querySelector('.users').innerHTML=`<span class="span">${span}</span>`
           	count = 0;
 		status = "false";
 	};
 }
+if(!(window.innerWidth>=990)){
+    document.getElementsByClassName('tutorial-btn')[2].style.marginTop=0;
+
+}
+
 var is_history = "false"
 
 function show() {
 	if (is_history === "false") {
-		document.querySelector('.div').classList.remove('hidden');
+		document.querySelector('.input').classList.remove('hidden');
 		is_history = "true";
 		document.querySelector('#history').innerHTML = "Hide My History";
 	} else if (is_history = "true") {
-		document.querySelector('.div').classList.add('hidden');
+		document.querySelector('.input').classList.add('hidden');
 		is_history = "false";
 		document.querySelector('#history').innerHTML = "Show My History";
 	};
@@ -246,3 +255,6 @@ function scrollToRight(el) {
 // scrolldown()
   
  
+
+console.log(document.getElementById('something').clientHeight);
+console.log(document.getElementById('something').offsetHeight);

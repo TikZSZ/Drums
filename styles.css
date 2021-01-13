@@ -32,10 +32,15 @@
 
 
 
-footer {
-  margin-top: 5%;
+.footer {
+  position: fixed;
+  bottom: 0;
   color: #dbedf3;
   font-family: sans-serif;
+  width: 100%;
+}
+.footer p{
+  margin: 20px 0 20px 0;
 }
 p {
   margin: 20px 0 5px 0;
@@ -45,12 +50,13 @@ span {
 }
 
 .hidden {
+  display: none;
   visibility: hidden;
 }
 .style {
   letter-spacing: 8px;
   font-family: "Redressed", cursive;
-  font-size: 4rem;
+  font-size: 3rem;
   background-color: #da0463;
   border-radius: 10px;
   margin: 3% auto 0 auto;
@@ -64,11 +70,13 @@ span {
   width: 70%;
 }
 .something {
+  min-height: 90px;
   margin: 50px auto 0 auto;
   width: 100%;
   text-align: left;
 }
 .input {
+  margin-top: 0%;
   text-align: left;
   margin-top: 5px;
   letter-spacing: 8px;
@@ -78,15 +86,19 @@ span {
   white-space: nowrap;
 }
 .div {
+  min-height: 30px;
+}
+.div p{
+  margin: 1% auto 0 auto;
   background-color: #da0463;
   border-radius: 100px;
-  margin: 3% auto 0 auto;
   width: 80%;
-
+}
+.tutorials-div{
 }
 
 .set {
-  margin: 2% auto 2% auto;
+  margin: 2% auto 1% auto;
 }
 .crash {
   background-image: url(images/crash.png);
@@ -161,7 +173,7 @@ span {
   padding: 10px 15px 10px 15px;
   text-decoration: none;
   border: 1px;
-  margin-top: 2%;
+  margin-top: 1%;
 }
 
 .tutorial-btn:hover {
@@ -198,11 +210,12 @@ span {
     margin: 5px auto 0 auto;
     width: 100%;
     text-align: left;
+    min-height: 40px;
   }
   .tutorial-btn {
     font-size: 16px;
     padding: 8px 15px 8px 15px;
-    margin: 2% 1% 1% 1%;
+    margin: 3% 1% 2% 1%;
     
   }
   .input{
