@@ -28,8 +28,8 @@ function removestyle(p) {
 
 document.querySelector('.set').addEventListener("click",function (event) {
 	if(event.target!==event.currentTarget){
-		document.querySelector('.input').innerHTML += event.path[0].innerHTML;
-		play(event.path[0].innerHTML);
+		document.querySelector('.input').innerHTML += event.target.innerHTML;
+		play(event.target.innerHTML);
 	};
 	event.stopPropagation;
 	},false);
