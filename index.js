@@ -28,6 +28,7 @@ function removestyle(p) {
 
 document.querySelector('.set').addEventListener("click",function (event) {
 	if(event.target!==event.currentTarget){
+		console.log(event);
 		document.querySelector('.input').innerHTML += event.target.innerHTML;
 		play(event.target.innerHTML);
 	};
